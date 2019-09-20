@@ -3,6 +3,9 @@ snap install helm --classic
 kubectl -n kube-system create serviceaccount tiller
 kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
 helm init --service-account tiller --upgrade
+
+sleep 1m
+
 helm install --name redis-cluster \
   --set cluster.slaveCount=1 \
   --set password=password \
