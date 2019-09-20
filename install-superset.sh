@@ -7,4 +7,4 @@ helm init --service-account tiller --upgrade
 sleep 2m
 
 #wget https://raw.githubusercontent.com/phenom1711/superset/master/superset-value.yaml
-helm install --name superset -f superset-values.yaml stable/superset
+helm install --name superset -f superset-value.yaml stable/superset
