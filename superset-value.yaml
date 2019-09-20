@@ -113,7 +113,7 @@ service:
     # external-dns.alpha.kubernetes.io/hostname: "superset.domain.com"
 
   ## loadbalancer source ranges. only used when service.type is "LoadBalancer"
-  loadBalancerSourceRanges: []
+  loadBalancerSourceRanges:
    - 192.168.0.0/16
 
 
