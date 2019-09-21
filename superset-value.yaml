@@ -13,7 +13,7 @@ image:
 
 initFile: |-
   /usr/local/bin/superset-init --username admin --firstname admin --lastname user --email admin@fab.org --password admin
-  superset load_examples
+  #superset load_examples
   superset runserver
 
 configFile: |-
@@ -37,7 +37,7 @@ configFile: |-
   # superset metadata (slices, connections, tables, dashboards, ...).
   # Note that the connection information to connect to the datasources
   # you want to explore are managed directly in the web UI
-  SQLALCHEMY_DATABASE_URI = 'sqlite:////var/lib/superset/superset.db'
+  #SQLALCHEMY_DATABASE_URI = 'sqlite:////var/lib/superset/superset.db'
 
   # Flask-WTF flag for CSRF
   WTF_CSRF_ENABLED = True
