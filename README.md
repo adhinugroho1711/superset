@@ -1,5 +1,12 @@
 # superset
 
+## how to install
+```
+1. install postgresql
+2. install redis
+3. install superset
+```
+
 ##  check postgres
 ```$ kubectl get svc postgres
 NAME       TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
