@@ -7,7 +7,7 @@ helm init --service-account tiller --upgrade
 sleep 2m
 
 helm install --name redis-cluster \
-  --set cluster.slaveCount=1 \
+  --set cluster.slaveCount=2 \
   --set password=password \
   --set securityContext.enabled=true \
   --set securityContext.fsGroup=2000 \
