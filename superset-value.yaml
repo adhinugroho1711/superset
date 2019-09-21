@@ -2,7 +2,6 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-
 replicaCount: 2
 
 ## Set default image, imageTag, and imagePullPolicy.
@@ -14,6 +13,7 @@ image:
 
 initFile: |-
   /usr/local/bin/superset-init --username admin --firstname admin --lastname user --email admin@fab.org --password admin
+  superset load_examples
   superset runserver
 
 configFile: |-
@@ -38,7 +38,6 @@ configFile: |-
   # Note that the connection information to connect to the datasources
   # you want to explore are managed directly in the web UI
   SQLALCHEMY_DATABASE_URI = 'sqlite:////var/lib/superset/superset.db'
-
 
   # Flask-WTF flag for CSRF
   WTF_CSRF_ENABLED = True
