@@ -1,8 +1,6 @@
 # Default values for superset.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-import os
-from werkzeug.contrib.cache import RedisCache
 
 replicaCount: 2
 
@@ -50,21 +48,17 @@ configFile: |-
   'CACHE_REDIS_DB': 1,
   'CACHE_REDIS_URL': 'redis://localhost:6379/1'}
   
-   class CeleryConfig(object):
-   BROKER_URL = 'redis://localhost:6379/1'
-   CELERY_IMPORTS = ('superset.sql_lab', )
-   CELERY_RESULT_BACKEND = 'redis://localhost:6379/1'
-   CELERY_ANNOTATIONS = {'tasks.add': {'rate_limit': '10/s'}}
-   CELERYD_LOG_LEVEL = 'DEBUG'
-   CELERYD_PREFETCH_MULTIPLIER = 1
-   CELERY_ACKS_LATE = True
-
-   CELERY_CONFIG = CeleryConfig
-   RESULTS_BACKEND = RedisCache(
-    host='localhost',
-    port=6379,
-    key_prefix='superset_results'
-  )
+   CELERYBEAT_SCHEDULE = {
+    'cache-warmup-hourly': {
+        'task': 'cache-warmup',
+        'schedule': crontab(minute=0, hour='*'),  # hourly
+        'kwargs': {
+            'strategy_name': 'top_n_dashboards',
+            'top_n': 5,
+            'since': '7 days ago',
+        },
+    },
+}
 
   # Flask-WTF flag for CSRF
   WTF_CSRF_ENABLED = True
