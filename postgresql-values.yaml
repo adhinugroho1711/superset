@@ -195,7 +195,7 @@ service:
   ## Specify the nodePort value for the LoadBalancer and NodePort service types.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
   ##
-  nodePort: 5432
+  # nodePort: 5432
 
   ## Provide any additional annotations which may be required. This can be used to
   annotations: {}
