@@ -15,7 +15,14 @@ initFile: |-
   pip3 install psycopg2
   /usr/local/bin/superset-init --username admin --firstname admin --lastname user --email admin@fab.org --password admin
   #superset load_examples
-  superset runserver
+  #superset runserver
+  gunicorn \
+      -w 10 \
+      --timeout 120 \
+      -b  0.0.0.0:8088 \
+      --limit-request-line 0 \
+      --limit-request-field_size 0 \
+      superset:app
 
 configFile: |-
   #---------------------------------------------------------
