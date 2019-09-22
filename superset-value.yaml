@@ -12,6 +12,7 @@ image:
   pullSecrets: []
 
 initFile: |-
+  pip3 install psycopg2
   /usr/local/bin/superset-init --username admin --firstname admin --lastname user --email admin@fab.org --password admin
   #superset load_examples
   superset runserver
