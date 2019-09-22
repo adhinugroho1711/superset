@@ -116,12 +116,10 @@ postgresqlPassword: admin123
 
 ## Create a database
 ## ref: https://github.com/bitnami/bitnami-docker-postgresql/blob/master/README.md#creating-a-database-on-first-run
-##
- postgresqlDatabase: supersetdb
+postgresqlDatabase: supersetdb
 
 ## PostgreSQL data dir
 ## ref: https://github.com/bitnami/bitnami-docker-postgresql/blob/master/README.md
-##
 postgresqlDataDir: /bitnami/postgresql/data
 
 ## Specify extra initdb args
