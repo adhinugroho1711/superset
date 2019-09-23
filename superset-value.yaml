@@ -54,16 +54,16 @@ configFile: |-
   # Flask-WTF flag for CSRF
   WTF_CSRF_ENABLED = True
   
-#   CACHE_CONFIG = {
-#   'CACHE_TYPE': 'redis',
-#   'CACHE_DEFAULT_TIMEOUT': 86400,
-#   'CACHE_KEY_PREFIX': 'superset_',
-#   'CACHE_REDIS_HOST': '192.168.64.7',
-#   'CACHE_REDIS_PORT': 32740,
-#   'CACHE_REDIS_DB': 1,
-#   'CACHE_REDIS_PASSWORD': 'password',
-#   'CACHE_REDIS_URL': 'redis://192.168.64.7:32740/1'
-#   }
+  CACHE_CONFIG = {
+  'CACHE_TYPE': 'redis',
+  'CACHE_DEFAULT_TIMEOUT': 86400,
+  'CACHE_KEY_PREFIX': 'superset_',
+  'CACHE_REDIS_HOST': '192.168.64.7',
+  'CACHE_REDIS_PORT': 32740,
+  'CACHE_REDIS_DB': 1,
+  'CACHE_REDIS_PASSWORD': 'password',
+  'CACHE_REDIS_URL': 'redis://192.168.64.7:32740/1'
+  }
 
   # Add endpoints that need to be exempt from CSRF protection
   WTF_CSRF_EXEMPT_LIST = []
