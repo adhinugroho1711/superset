@@ -15,6 +15,7 @@ initFile: |-
   sudo chown -R root /home/$USERNAME/.cache/pip/
   sudo pip3 install psycopg2
   sudo pip3 install virtualenv
+  superset db upgrade
   /usr/local/bin/superset-init --username admin --firstname admin --lastname user --email admin@fab.org --password admin
   #superset load_examples
   #superset runserver
