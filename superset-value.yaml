@@ -46,7 +46,7 @@ configFile: |-
   # Note that the connection information to connect to the datasources
   # you want to explore are managed directly in the web UI
   #SQLALCHEMY_DATABASE_URI = 'sqlite:////var/lib/superset/superset.db'
-
+  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgresadmin:admin123@192.168.64.7:31937/supersetdb'
   # Flask-WTF flag for CSRF
   WTF_CSRF_ENABLED = True
   # Add endpoints that need to be exempt from CSRF protection
