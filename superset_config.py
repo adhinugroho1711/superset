@@ -3,13 +3,13 @@ from werkzeug.contrib.cache import RedisCache
 MAPBOX_API_KEY = os.getenv('MAPBOX_API_KEY', '')
 REDIS_SERVER_IP = os.getenv('localhost', '')
 REDIS_PASSWORD = os.getenv('password', '')
-POSTGRES_SERVER_IP = os.getenv('localhost', '')
+POSTGRES_SERVER_IP = os.getenv('192.168.64.7', '')
 POSTGRES_USER = 'postgresadmin'
 POSTGRES_PASSWORD = os.getenv('admin123', '')
 SUPERSET_CACHE_REDIS_URL = "".join(['redis://:', REDIS_PASSWORD, '@', REDIS_SERVER_IP, ':6379/1'])
 SUPERSET_BROKER_URL = "".join(['redis://:', REDIS_PASSWORD, '@', REDIS_SERVER_IP, ':6379/0'])
 SUPERSET_CELERY_RESULT_BACKEND = "".join(['redis://:', REDIS_PASSWORD, '@', REDIS_SERVER_IP, ':6379/0'])
-SUPERSET_SQLALCHEMY_DATABASE_URI = "".join(['postgresql+psycopg2://', POSTGRES_USER, ':', POSTGRES_PASSWORD, '@', POSTGRES_SERVER_IP, ':5432/supersetdb'])
+SUPERSET_SQLALCHEMY_DATABASE_URI = "".join(['postgresql+psycopg2://', POSTGRES_USER, ':', POSTGRES_PASSWORD, '@', POSTGRES_SERVER_IP, ':31937/supersetdb'])
 CACHE_CONFIG = {
     'CACHE_TYPE': 'redis',
     'CACHE_DEFAULT_TIMEOUT': 300,
