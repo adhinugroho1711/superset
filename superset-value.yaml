@@ -58,6 +58,7 @@ configFile: |-
   'CACHE_REDIS_HOST': '192.168.64.7',
   'CACHE_REDIS_PORT': 32740,
   'CACHE_REDIS_DB': 1,
+  'CACHE_REDIS_PASSWORD': 'password',
   'CACHE_REDIS_URL': 'redis://192.168.64.7:32740/1'
   }
 
