@@ -13,7 +13,7 @@ image:
 
 initFile: |-
   pip3 install psycopg2
-  /usr/local/bin/superset-init --username admin --firstname admin --lastname user --email admin@fab.org --password admin
+  #/usr/local/bin/superset-init --username admin --firstname admin --lastname user --email admin@fab.org --password admin
   #superset load_examples
   #superset runserver
   gunicorn \
@@ -55,10 +55,10 @@ configFile: |-
   'CACHE_TYPE': 'redis',
   'CACHE_DEFAULT_TIMEOUT': 86400,
   'CACHE_KEY_PREFIX': 'superset_',
-  'CACHE_REDIS_HOST': 'localhost',
-  'CACHE_REDIS_PORT': 6379,
+  'CACHE_REDIS_HOST': '192.168.64.7',
+  'CACHE_REDIS_PORT': 32740,
   'CACHE_REDIS_DB': 1,
-  'CACHE_REDIS_URL': 'redis://localhost:6379/1'
+  'CACHE_REDIS_URL': 'redis://192.168.64.7:32740/1'
   }
 
   # Add endpoints that need to be exempt from CSRF protection
