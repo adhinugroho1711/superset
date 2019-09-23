@@ -13,8 +13,8 @@ image:
 
 initFile: |-
   sudo chown -R root /home/$USERNAME/.cache/pip/
-  pip3 install psycopg2
-  pip3 install virtualenv
+  sudo pip3 install psycopg2
+  sudo pip3 install virtualenv
   /usr/local/bin/superset-init --username admin --firstname admin --lastname user --email admin@fab.org --password admin
   #superset load_examples
   #superset runserver
