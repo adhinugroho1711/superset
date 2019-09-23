@@ -53,7 +53,7 @@ configFile: |-
   WTF_CSRF_EXEMPT_LIST = []
 
   # Set this API key to enable Mapbox visualizations
-  MAPBOX_API_KEY = ''
+  MAPBOX_API_KEY = 'pk.eyJ1IjoicGhlbm9tMTcxMSIsImEiOiJjazB2cGd4YmcwNzVjM25wZjI5ejgwMm5pIn0.wB3ajQtMehtxl8RhVMIvpg'
 
 ## Extra confiuguration files and their content to be made available next to the config file
 extraConfigFiles: {}
