@@ -18,6 +18,7 @@ initFile: |-
   /usr/local/bin/superset-init --username admin --firstname admin --lastname user --email admin@fab.org --password admin
   #superset load_examples
   #superset runserver
+  superset init
   gunicorn \
       -w 10 \
       --timeout 120 \
