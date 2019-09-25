@@ -40,7 +40,7 @@ airflow:
   fernetKey: ""
   service:
     annotations: {}
-    type: ClusterIP
+    type: NodePort
     externalPort: 8080
   ##
   ## The executor to use.
@@ -92,7 +92,7 @@ airflow:
   schedulerDoPickle: true
   ##
   ## Number of replicas for web server.
-  webReplicas: 1
+  webReplicas: 2
   ##
   ## Custom airflow configuration environment variables
   ## Use this to override any airflow setting settings defining environment variables in the
