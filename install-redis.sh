@@ -14,6 +14,7 @@ helm install --name redis-cluster \
   --set securityContext.runAsUser=1000 \
   --set volumePermissions.enabled=true \
   --set master.persistence.enabled=true \
+  --set master.service.type=NodePort \
   --set slave.persistence.enabled=true \
   --set master.persistence.enabled=true \
   --set master.persistence.path=/data \
@@ -22,6 +23,7 @@ helm install --name redis-cluster \
   --set slave.persistence.enabled=true \
   --set slave.persistence.path=/data \
   --set slave.persistence.size=8Gi \
+  --set slave.service.type=NodePort \
   --set slave.persistence.storageClass=manual \
 stable/redis
 
